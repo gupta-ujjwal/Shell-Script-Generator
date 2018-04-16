@@ -1,0 +1,31 @@
+.container-fluid {
+    padding-top:30px;
+    width: 98.8vw;
+    height: 140vh;
+    background: rgb(73, 73, 73);
+    color: white;
+}
+
+li {
+    color: black;
+}
+
+.thumbnail {
+    
+}
+
+.set-sp{
+    margin-top: 5vh;
+    padding-left: 3vh;
+}
+
+.set-p{
+    padding-top: 1vh;
+    padding-left: 3vh;
+}
+
+.form-cm p {
+    font-size: 20px;
+    margin: 10px;
+    float: left;
+}

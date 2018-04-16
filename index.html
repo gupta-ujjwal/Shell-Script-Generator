@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shell Scripting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+    
+
+</head>
+<body ng-controller="myCtrl">
+    <div class="container-fluid" >
+    <div class="row">
+        <div class="col-md-2">
+            <p>
+                Search : 
+                <input style="color:black" ng-model="query"/> 
+            </p>
+        </div>
+        <div class="col-md-10">
+            <ul class="commands">
+                <li class="thumbnail" ng-repeat="command in commands | filter:query">
+                    <a href="#" ng-click="al(command)">
+                        <span class="set-sp">{{command.name}}</span>
+                        <p class="set-p">{{command.desc}}</p>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-cm">
+                    <p ng-show="showPath">Path : </p> 
+                    <input ng-show="showPath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showFileName">File Name : </p> 
+                    <input  ng-show="showFileName" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showNewPath">New Path : </p> 
+                    <input ng-show="showNewPath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showNewFileName">New File Name : </p> 
+                    <input ng-show="showNewFileName" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showDirLocate">Directory Location : </p> 
+                    <input ng-show="showDirLocate" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showDirName">Directory Name : </p> 
+                    <input ng-show="showDirName" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showNewDirName">New Directory Name : </p> 
+                    <input ng-show="showNewDirName" style="color:black; float: left; margin:10px" />
+                    <button  ng-show="showButton" style="font-size:20px; float:left" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
