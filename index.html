@@ -30,22 +30,40 @@
                     </a>
                 </li>
             </ul>
-            <form class="form-cm">
-                    <p ng-show="showPath">Path : </p> 
-                    <input ng-show="showPath" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showFileName">File Name : </p> 
-                    <input  ng-show="showFileName" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showNewPath">New Path : </p> 
-                    <input ng-show="showNewPath" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showNewFileName">New File Name : </p> 
-                    <input ng-show="showNewFileName" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showDirLocate">Directory Location : </p> 
-                    <input ng-show="showDirLocate" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showDirName">Directory Name : </p> 
-                    <input ng-show="showDirName" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showNewDirName">New Directory Name : </p> 
-                    <input ng-show="showNewDirName" style="color:black; float: left; margin:10px" />
-                    <button  ng-show="showButton" style="font-size:20px; float:left" type="submit" class="btn btn-primary">Submit</button>
+            <form class="form-cm" >
+                    <!--Create File-->
+                    <p ng-show="showPathCreateFile">Path : </p> 
+                    <input ng-show="showPathCreateFile" name="fileCrPath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showFileNameCreateFile">File Name : </p> 
+                    <input  ng-show="showFileNameCreateFile" name="fileCr" style="color:black; float: left; margin:10px" />
+                    <input type="submit" name="createFile" ng-show="showBtnCreateFile" class="btn btn-primary" value=" Create ">
+
+                    <!-- Delete File-->
+                    <p ng-show="showPathDelFile">Path : </p> 
+                    <input ng-show="showPathDelFile" name="fileDelPath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showFileNameDelFile">File Name : </p> 
+                    <input ng-show="showFileNameDelFile" name="fileDel" style="color:black; float: left; margin:10px" />
+                    <input type="submit" ng-show="showBtnDelFile" name="deleteFile" class="btn btn-primary" value=" Delete ">
+
+                    <!--Move File-->
+                    <p ng-show="showPathMoveFile">Current Path : </p> 
+                    <input ng-show="showPathMoveFile" name="fileMovePath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showPathMoveFile">File Name : </p> 
+                    <input  ng-show="showPathMoveFile" name="fileMove" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showPathMoveFile">New Path : </p> 
+                    <input  ng-show="showPathMoveFile" name="fileMoveNewPath" style="color:black; float: left; margin:10px" />
+                    <input type="submit" name="moveFile" class="btn btn-primary" value=" Create ">
+
+                    <!--Rename a File-->
+                    <p ng-show="showPathReFile">Current Path : </p> 
+                    <input ng-show="showPathReFile" name="fileMovePath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showPathReFile">File Name : </p> 
+                    <input  ng-show="showPathReFile" name="fileMove" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showPathReFile">New Path : </p> 
+                    <input  ng-show="showPathReFile" name="fileMoveNewPath" style="color:black; float: left; margin:10px" />
+                    <input type="submit" name="moveFile" class="btn btn-primary" value=" Create ">
+ 
+                    
             </form>
         </div>
     </div>

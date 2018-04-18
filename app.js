@@ -39,15 +39,15 @@ app.controller("myCtrl" ,function ($scope) {
           }
           else if(item.name==($scope.commands[1].name)) {
               del();
-              $scope.showPath=true;
-              $scope.showFileName=true;
-              $scope.showButton=true;
+              $scope.showPathCreateFile=true;
+              $scope.showFileNameCreateFile=true;
+              $scope.showBtnCreateFile=true;
           }
           else if(item.name==($scope.commands[2].name)) {
               del();
-              $scope.showPath=true;
-              $scope.showFileName=true;
-              $scope.showButton=true;
+              $scope.showPathDelFile=true;
+              $scope.showFileNameDelFile=true;
+              $scope.showBtnDelFile=true;
           }
           else if(item.name==($scope.commands[3].name)) {
               del();
@@ -78,14 +78,15 @@ app.controller("myCtrl" ,function ($scope) {
           }
       }
      function del() {
-        $scope.showPath=false;
-        $scope.showFileName=false;
-        $scope.showNewFileName=false;
-        $scope.showDirLocate=false;
-        $scope.showNewPath=false;
-        $scope.showDirName=false;
-        $scope.showNewDirName=false;
-        $scope.showButton=false;  
+        $scope.showPathCreateFile=false;
+        $scope.showFileNameCreateFile=false;
+        $scope.showBtnCreateFile=false;
+        
+        $scope.showPathDelFile=false;
+        $scope.showFileNameDelFile=false;
+        $scope.showBtnDelFile=false;
+
+        
       }
     });
 
