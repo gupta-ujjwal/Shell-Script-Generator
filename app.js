@@ -39,54 +39,41 @@ app.controller("myCtrl" ,function ($scope) {
           }
           else if(item.name==($scope.commands[1].name)) {
               del();
-              $scope.showPathCreateFile=true;
-              $scope.showFileNameCreateFile=true;
-              $scope.showBtnCreateFile=true;
+              $scope.showCreateFile=true;
           }
           else if(item.name==($scope.commands[2].name)) {
               del();
-              $scope.showPathDelFile=true;
-              $scope.showFileNameDelFile=true;
-              $scope.showBtnDelFile=true;
+              $scope.showDelFile=true;
           }
           else if(item.name==($scope.commands[3].name)) {
               del();
-              $scope.showPath=true;
-              $scope.showFileName=true;
-              $scope.showNewPath=true;
-              $scope.showButton=true;
+             $scope.showMoveFile=true;
           }
           else if(item.name==($scope.commands[4].name)) {
             del();
-            $scope.showPath=true;
-            $scope.showFileName=true;
-            $scope.showNewFileName=true;
-            $scope.showButton=true;
+            $scope.showReFile=true;
           }
           else if(item.name==($scope.commands[5].name)) {
             del();
-            $scope.showDirLocate=true;
-            $scope.showDirName=true;
-            $scope.showButton=true;
+            $scope.showCrDir=true;
           }
           else  {
             del();
-            $scope.showDirLocate=true;
-            $scope.showDirName=true;
-            $scope.showNewDirName=true;
-            $scope.showButton=true;  
+            $scope.showReDir=true;
           }
       }
      function del() {
-        $scope.showPathCreateFile=false;
-        $scope.showFileNameCreateFile=false;
-        $scope.showBtnCreateFile=false;
+        $scope.showCreateFile=false;
         
-        $scope.showPathDelFile=false;
-        $scope.showFileNameDelFile=false;
-        $scope.showBtnDelFile=false;
+        $scope.showDelFile=false;
+        
+        $scope.showMoveFile=false;
 
-        
+        $scope.showReFile=false;
+
+        $scope.showCrDir=false;
+
+        $scope.showReDir=false;
       }
     });
 

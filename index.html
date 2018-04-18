@@ -25,45 +25,60 @@
             <ul class="commands">
                 <li class="thumbnail" ng-repeat="command in commands | filter:query">
                     <a href="#" ng-click="al(command)">
-                        <span class="set-sp">{{command.name}}</span>
+                        <span class="set-sp"><h4>{{command.name}}</h4></span>
                         <p class="set-p">{{command.desc}}</p>
                     </a>
                 </li>
             </ul>
             <form class="form-cm" >
                     <!--Create File-->
-                    <p ng-show="showPathCreateFile">Path : </p> 
-                    <input ng-show="showPathCreateFile" name="fileCrPath" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showFileNameCreateFile">File Name : </p> 
-                    <input  ng-show="showFileNameCreateFile" name="fileCr" style="color:black; float: left; margin:10px" />
-                    <input type="submit" name="createFile" ng-show="showBtnCreateFile" class="btn btn-primary" value=" Create ">
+                    <p ng-show="showCreateFile">Path : </p> 
+                    <input ng-show="showCreateFile" name="fileCrPath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showCreateFile">File Name : </p> 
+                    <input  ng-show="showCreateFile" name="fileCr" style="color:black; float: left; margin:10px" />
+                    <input type="submit" name="createFile" ng-show="showCreateFile" class="btn btn-primary" value=" Generate Batch File ">
 
                     <!-- Delete File-->
-                    <p ng-show="showPathDelFile">Path : </p> 
-                    <input ng-show="showPathDelFile" name="fileDelPath" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showFileNameDelFile">File Name : </p> 
-                    <input ng-show="showFileNameDelFile" name="fileDel" style="color:black; float: left; margin:10px" />
-                    <input type="submit" ng-show="showBtnDelFile" name="deleteFile" class="btn btn-primary" value=" Delete ">
+                    <p ng-show="showDelFile">Path : </p> 
+                    <input ng-show="showDelFile" name="fileDelPath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showDelFile">File Name : </p> 
+                    <input ng-show="showDelFile" name="fileDel" style="color:black; float: left; margin:10px" />
+                    <input type="submit" ng-show="showDelFile" name="deleteFile" class="btn btn-primary" value=" Generate Batch File ">
 
                     <!--Move File-->
-                    <p ng-show="showPathMoveFile">Current Path : </p> 
-                    <input ng-show="showPathMoveFile" name="fileMovePath" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showPathMoveFile">File Name : </p> 
-                    <input  ng-show="showPathMoveFile" name="fileMove" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showPathMoveFile">New Path : </p> 
-                    <input  ng-show="showPathMoveFile" name="fileMoveNewPath" style="color:black; float: left; margin:10px" />
-                    <input type="submit" name="moveFile" class="btn btn-primary" value=" Create ">
+                    <p ng-show="showMoveFile">Current Path : </p> 
+                    <input ng-show="showMoveFile" name="fileMovePath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showMoveFile">File Name : </p> 
+                    <input ng-show="showMoveFile" name="fileMove" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showMoveFile">New Path : </p> 
+                    <input ng-show="showMoveFile" name="fileMoveNewPath" style="color:black; float: left; margin:10px" />
+                    <input type="submit" ng-show="showMoveFile" name="moveFile" class="btn btn-primary" value=" Generate Batch File ">
 
                     <!--Rename a File-->
-                    <p ng-show="showPathReFile">Current Path : </p> 
-                    <input ng-show="showPathReFile" name="fileMovePath" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showPathReFile">File Name : </p> 
-                    <input  ng-show="showPathReFile" name="fileMove" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showPathReFile">New Path : </p> 
-                    <input  ng-show="showPathReFile" name="fileMoveNewPath" style="color:black; float: left; margin:10px" />
-                    <input type="submit" name="moveFile" class="btn btn-primary" value=" Create ">
- 
-                    
+                    <p ng-show="showReFile">Path : </p> 
+                    <input ng-show="showReFile" name="fileRePath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showReFile">File Name : </p> 
+                    <input  ng-show="showReFile" name="fileRe" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showReFile">New Name : </p> 
+                    <input  ng-show="showReFile" name="fileReNewName" style="color:black; float: left; margin:10px" />
+                    <input type="submit" ng-show="showReFile" name="reFile" class="btn btn-primary" value=" Generate Batch File ">
+
+                    <!--Create a Directory-->
+                    <p ng-show="showCrDir">Path : </p> 
+                    <input ng-show="showCrDir" name="fileCrDirPath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showCrDir">Directory Name : </p> 
+                    <input  ng-show="showCrDir" name="fileCrDir" style="color:black; float: left; margin:10px" />
+                    <input type="submit" ng-show="showCrDir" name="crFile" class="btn btn-primary" value=" Generate Batch File ">
+
+                    <!--Rename a Directory-->
+                    <p ng-show="showReDir">Path : </p> 
+                    <input ng-show="showReDir" name="fileReDirPath" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showReDir">Directory Name : </p> 
+                    <input  ng-show="showReDir" name="fileReDir" style="color:black; float: left; margin:10px" />
+                    <p ng-show="showReDir">New Directory Name : </p> 
+                    <input  ng-show="showReDir" name="fileReDirNewName" style="color:black; float: left; margin:10px" />
+                    <input type="submit" ng-show="showReDir" name="reDirFile" class="btn btn-primary" value=" Generate Batch File ">
+
             </form>
         </div>
     </div>
