@@ -10,13 +10,18 @@ li {
     color: black;
 }
 
-.thumbnail {
-    
+.heading {
+    text-align: center;
+    margin-top: -1.5vh;
+    padding-bottom: 3vh; 
+    font-family: "SimSun";
+    font-size: 50px;
 }
 
 .set-sp{
-    margin-top: 5vh;
+    margin-top: 2vh;
     padding-left: 3vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .set-p{

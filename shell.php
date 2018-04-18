@@ -33,11 +33,7 @@
                     </a>
                 </li>
             </ul>
-<<<<<<< HEAD
-            <form class="form-cm" name="myform" action="Create.php" method="post">
-=======
             <form class="form-cm" name="myform" action="Create.php" method="post" >
->>>>>>> 89749cee38396b17f1ce0c1333bcbc44695ae469
                     <!--Create File-->
                     <p ng-show="showCreateFile">Path : </p> 
                     <input ng-show="showCreateFile" name="fileCrPath" style="color:black; float: left; margin:10px" />
