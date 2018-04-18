@@ -77,7 +77,7 @@
                     <input  ng-show="showReDir" name="fileReDir" style="color:black; float: left; margin:10px" />
                     <p ng-show="showReDir">New Directory Name : </p> 
                     <input  ng-show="showReDir" name="fileReDirNewName" style="color:black; float: left; margin:10px" />
-                    <input type="submit" ng-show="showReDir" name="reDirFile" class="btn btn-primary" value=" Generate Batch File ">
+                    <input type="submit" ng-show="showReDir" name="reDir" class="btn btn-primary" value=" Generate Batch File ">
 
             </form>
         </div>
