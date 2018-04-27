@@ -1,6 +1,8 @@
 <?php
-
+    echo "<body style='background-color:rgb(73, 73, 73)'>";
 // $curr_loc=@$_POST['curr_loc'];
+
+
 
 $fileCr=@$_POST['fileCr'];
 $fileCrPath=@$_POST['fileCrPath'];
@@ -12,71 +14,70 @@ $fileMove=@$_POST['fileMove'];
 $fileMovePath=@$_POST['fileMovePath'];
 $fileMoveNewPath=@$_POST['fileMoveNewPath'];
 
-$fileCrDir=@$_POST['fileCrDir'];
-$fileCrDirPath=@$_POST['fileCrDirPath'];
-
 $fileRe=@$_POST['fileRe'];
 $fileRePath=@$_POST['fileRePath'];
 $fileReNewName=@$_POST['fileReNewName'];
+
+$fileCrDir=@$_POST['fileCrDir'];
+$fileCrDirPath=@$_POST['fileCrDirPath'];
 
 $fileReDir=@$_POST['fileReDir'];
 $fileReDirPath=@$_POST['fileReDirPath'];
 $fileReDirNewName=@$_POST['fileReDirNewName'];
 
-$filename="mydata.sh";
+$filename="mydata.bat";
+
+
 
 if(isset($_POST['createFile']))
 {
     $f_data='
-touch '.$fileCr.'
+fsutil file createnew '.$fileCrPath.''.$fileCr.' 0
 ';
 }
 
 else if(isset($_POST['deleteFile']))
 {
     $f_data='
-mkdir '.$fileDel.'
+del '.$fileDelPath.''.$fileDel.'
 ';
 }
 
 else if(isset($_POST['moveFile']))
 {
     $f_data='
-mv '.$fileMove.' '.$fileMoveNewPath.'/'.$fileMove.'
+MOVE '.$fileMovePath.''.$fileMove.' '.$fileMoveNewPath.'
 ';
 }
 
 else if(isset($_POST['reFile']))
 {
     $f_data='
-mv '.$fileRe.' '.$fileReNewName.'
+rename '.$fileRePath.''.$fileRe.' '.$fileReNewName.'
 ';
 }
 
-
-else if(isset($_POST['crDir']))
+else if(isset($_POST['crFile']))
 {
     $f_data='
-mkdir '.$fileCrDirPath.'/'.$fileCrDir.'
+mkdir '.$fileCrDirPath.''.$fileCrDir.'
 ';
 }
 
-else if(isset($_POST['reDir']))
+else if(isset($_POST['reDirFile']))
 {
     $f_data='
-rmdir '.$fileReDir.' '.$fileReDirNewName.'
+rmdir '.$fileReDirPath.''.$fileReDir.'
 ';
 }
-
 
 else{
     echo 'BIEEE';
 }
+echo '<span style="color:rgb(110,190,236); font-size:30px; text-align:center;">Your Bat file has been created'.$filename.' <br>
+<a href="'.$filename.'">Click here to Download Your Bat File  </span>';
 
-echo 'Your Bat file has been created'.$filename.' <br>
-<a href="'.$filename.'">Click here to Download Your Bat File </a> ';
 $file = fopen($filename, "w");
 fwrite($file,$f_data);
 fclose($file);
-
 ?>

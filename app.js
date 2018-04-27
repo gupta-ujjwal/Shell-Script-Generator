@@ -3,10 +3,6 @@ var app = angular.module('myApp',[]);
 app.controller("myCtrl" ,function ($scope) {
       $scope.commands = [
         {
-          "name":"List Files",
-          "desc":"List all your files in the current directory .",
-        }, 
-        {
           "name":"Create File",
           "desc":"Create a new text file",
           "extra":""
@@ -28,32 +24,28 @@ app.controller("myCtrl" ,function ($scope) {
             "desc":"Create a new Folder/Directory "
         },
         {
-            "name":"Rename Directory",
-            "desc":"Rename an already existing directory"
+            "name":"Delete a Directory",
+            "desc":"Delete an already existing directory"
         }
       ];
         $scope.al = function(item) {
           if(item.name==($scope.commands[0].name)) {
-                del();
-                alert("Add function");
-          }
-          else if(item.name==($scope.commands[1].name)) {
               del();
               $scope.showCreateFile=true;
           }
-          else if(item.name==($scope.commands[2].name)) {
+          else if(item.name==($scope.commands[1].name)) {
               del();
               $scope.showDelFile=true;
           }
-          else if(item.name==($scope.commands[3].name)) {
+          else if(item.name==($scope.commands[2].name)) {
               del();
              $scope.showMoveFile=true;
           }
-          else if(item.name==($scope.commands[4].name)) {
+          else if(item.name==($scope.commands[3].name)) {
             del();
             $scope.showReFile=true;
           }
-          else if(item.name==($scope.commands[5].name)) {
+          else if(item.name==($scope.commands[4].name)) {
             del();
             $scope.showCrDir=true;
           }
@@ -63,6 +55,9 @@ app.controller("myCtrl" ,function ($scope) {
           }
       }
      function del() {
+         
+        $scope.showList=false;
+
         $scope.showCreateFile=false;
         
         $scope.showDelFile=false;

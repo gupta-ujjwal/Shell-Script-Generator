@@ -33,7 +33,8 @@
                     </a>
                 </li>
             </ul>
-            <form class="form-cm" name="myform" action="Create.php" method="post" >
+            <form class="form-cm" name="myform" action="generate.php" method="post" >
+            
                     <!--Create File-->
                     <p ng-show="showCreateFile">Path : </p> 
                     <input ng-show="showCreateFile" name="fileCrPath" style="color:black; float: left; margin:10px" />
@@ -78,8 +79,6 @@
                     <input ng-show="showReDir" name="fileReDirPath" style="color:black; float: left; margin:10px" />
                     <p ng-show="showReDir">Directory Name : </p> 
                     <input  ng-show="showReDir" name="fileReDir" style="color:black; float: left; margin:10px" />
-                    <p ng-show="showReDir">New Directory Name : </p> 
-                    <input  ng-show="showReDir" name="fileReDirNewName" style="color:black; float: left; margin:10px" />
                     <input type="submit" ng-show="showReDir" name="reDirFile" class="btn btn-primary" value=" Generate Batch File ">
 
             </form>
